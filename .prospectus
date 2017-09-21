@@ -1,0 +1,21 @@
+Prospectus.extra_dep('file', 'prospectus_circleci')
+Prospectus.extra_dep('file', 'prospectus_pkgforge')
+
+pkgforge = PkgForge.load_from_file
+my_slug = pkgforge.org + '/' + pkgforge.name
+
+item do
+  expected do
+    github_release
+    repo 'kdave/btrfs-progs'
+    regex /^v([\d.]+)$/
+  end
+
+  actual do
+    git_tag
+    regex /^(.*)-\d+$/
+  end
+
+  extend ProspectusPkgforge::DepItems
+  extend ProspectusCircleci::Build.new(my_slug)
+end
