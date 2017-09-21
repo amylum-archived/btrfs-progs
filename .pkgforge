@@ -11,18 +11,33 @@ deps(
   openssl: {
     version: '1.0.2l-1',
     checksum: '6a46a1a65aa5cadc69a2b01e3ef8fa0a38353f3f7b86c1a772ab5156dd5b2264'
+  },
+  lzo: {
+    version: '2.10-1',
+    checksum: '67db922b1320bf2856ed8c67a07f433dbab1d410bd1751b81d3909b1d38a578c'
+  },
+  'linux-api-headers': {
+    version: '4.13-1',
+    checksum: '50b2288419fe132c061bdf3d297293011929abc1092ffaa5e523ad6549b4f5fa'
+  },
+  'util-linux': {
+    version: '2.30.1-8',
+    checksum: 'dd84f243889f2a6447381aca3ebfffcd178d7edc98767697c77e63b5abc2269c'
   }
 )
 
 configure_flags(
-  prefix: '/usr'
+  prefix: '/usr',
+  'disable-backtrace': nil,
+  'disable-convert': nil
 )
 
 cflags
 harden
 
 build do
-  configure
+  run './autogen.sh'
+  configure "LDFLAGS" => "#{@forge.cflags.join(' ')}"
   make
   install
 end
