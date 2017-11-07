@@ -21,8 +21,8 @@ deps(
     checksum: '50b2288419fe132c061bdf3d297293011929abc1092ffaa5e523ad6549b4f5fa'
   },
   'util-linux': {
-    version: '2.31-8',
-    checksum: '1f1d5761be2763e39f5f177e50490dc3e84cc494c859aaebaeae44b3ca945b9b'
+    version: '2.31-9',
+    checksum: 'a070872dc25047e8db6081b13d8e729cb42929e09b7c6b410d1a8ab8fe60ab0f'
   }
 )
 
