@@ -9,6 +9,7 @@ item do
     github_tag
     repo 'kdave/btrfs-progs'
     regex /^v([\d.]+)$/
+    filter /^v([\d.]+)$/
   end
 
   actual do
