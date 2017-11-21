@@ -1,0 +1,13 @@
+diff --git a/configure.ac b/configure.ac
+index 290dc1d5..4a8600e8 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -58,8 +58,6 @@ AC_DEFUN([PKG_STATIC], [
+   if AC_RUN_LOG([pkg-config --exists --print-errors "$2"]); then
+     $1=`pkg-config --libs --static "$2"`
+     AC_SUBST([$1])
+-  else
+-    AC_MSG_ERROR([pkg-config description of $2, needed for static build, is not available])
+   fi
+ ])
+ 

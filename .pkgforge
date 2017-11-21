@@ -9,8 +9,8 @@ deps(
     checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
   },
   openssl: {
-    version: '1.0.2m-1',
-    checksum: '263c64d3c4cde7f0f695a08453738842ceb6f2273882123e10ba4bbad619f9e0'
+    version: '1.1.0g-1',
+    checksum: 'f70d94ca94f05be4a14438cf29ed4695d9731d023a4b72d30126d826720bc48b'
   },
   lzo: {
     version: '2.10-1',
@@ -23,6 +23,10 @@ deps(
   'util-linux': {
     version: '2.31-11',
     checksum: '8b20597ec7838d832f2c8ded230b70059da26e8ea8d116a33cfd609d4a036c2b'
+  },
+  zstd: {
+    version: '1.3.2-2',
+    checksum: 'e22601304150c6affb40a643425f3c808f580ffcf3d1dfe2d47bdc6ab7832799'
   }
 )
 
@@ -35,9 +39,11 @@ configure_flags(
 cflags
 harden
 
+patch 'pkgconfig.patch'
+
 build do
   run './autogen.sh'
-  configure "LDFLAGS" => "#{@forge.cflags.join(' ')}"
+  configure "LDFLAGS" => "#{@forge.cflags.join(' ')}", "ZSTD_CFLAGS" => "-I#{dep(:zstd)}/usr/include -L#{dep(:zstd)}/usr/lib", "ZSTD_LIBS" => "-lzstd"
   make
   install
 end
