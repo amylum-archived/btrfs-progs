@@ -22,7 +22,7 @@ deps(
   },
   'util-linux': {
     version: '2.32-6',
-    checksum: '5200a2cefc437475c6194721bc4ad9aea409e9292223dba89000d21de80fd8dd'
+    checksum: 'b46396419fee4e55ba9d7a6b5d904f9189f632119b392fe40c67d2f156c8a183'
   },
   zstd: {
     version: '1.3.3-1',
