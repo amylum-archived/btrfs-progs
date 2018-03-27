@@ -25,8 +25,8 @@ deps(
     checksum: 'b46396419fee4e55ba9d7a6b5d904f9189f632119b392fe40c67d2f156c8a183'
   },
   zstd: {
-    version: '1.3.3-1',
-    checksum: 'ddf75ae9df6f552d36f12742766b5a1f92452a7dc8c79e77389869185a1e2037'
+    version: '1.3.4-1',
+    checksum: '881a3aafa5389b597193a0d13b1ddac807f66f833ae3946b9dc44a6757692870'
   }
 )
 
