@@ -9,8 +9,8 @@ deps(
     checksum: '5596e2d39ef98e2323ac415f50afa71a433ed65c23e8d1f2723f711f5ffb4f32'
   },
   openssl: {
-    version: '1.1.0g-2',
-    checksum: 'de874867ea234470f6bc1969f6edaf6494e8b8e9f85c108b4db638cda3888241'
+    version: '1.1.0h-1',
+    checksum: 'c05e026a0e376cc4f5bb1dc1718fab436152e4cc35f02a378a8b85a28764572a'
   },
   lzo: {
     version: '2.10-1',
@@ -21,8 +21,8 @@ deps(
     checksum: 'dbfe68e7620b09fe2996d83fe4ae738dddb2486885b9d5ef3dc27ae77d7585ba'
   },
   'util-linux': {
-    version: '2.32-6',
-    checksum: 'b46396419fee4e55ba9d7a6b5d904f9189f632119b392fe40c67d2f156c8a183'
+    version: '2.32-7',
+    checksum: '5ea0845223359398eadea0cd221e8ff77755bacd7842d8c9a5fc10f194e8b86e'
   },
   zstd: {
     version: '1.3.4-1',
