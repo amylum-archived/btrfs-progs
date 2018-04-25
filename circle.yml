@@ -5,6 +5,7 @@ machine:
     PKGFORGE_STATEFILE: '/tmp/pkgforge'
 dependencies:
   override:
+  - rm -rf .git/modules/upstream upstream
   - git submodule update --init
   - git fetch --tags origin
 test:
