@@ -1,6 +1,6 @@
 [submodule "meta"]
 	path = meta
-	url = git://github.com/amylum/pkgforge-helper
+	url = https://github.com/amylum/pkgforge-helper
 [submodule "upstream"]
 	path = upstream
-	url = git://github.com/kdave/btrfs-progs.git
+	url = https://github.com/kdave/btrfs-progs.git
